@@ -1,0 +1,17 @@
+class Solution:
+    def searchRange(self, nums: List[int], target: int) -> List[int]:
+        ans=[]
+        arr=[]
+        for i in range(len(nums)):
+            if nums[i]==target:
+                arr.append(i)
+        if len(arr)>1:
+            ans.append(arr[0])
+            ans.append(arr[len(arr)-1])
+        elif len(arr)==1:
+            ans.append(arr[0])
+            ans.append(arr[0])
+        elif len(arr)==0:
+            ans.append(-1)
+            ans.append(-1)
+        return(ans)
